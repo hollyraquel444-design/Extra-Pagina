@@ -1,0 +1,58 @@
+.eventos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.evento {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(233, 30, 99, 0.25);
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,0.95),
+    rgba(248,187,208,0.4)
+  );
+  transition: 0.35s ease;
+}
+
+.evento::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(233,30,99,0.15),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.evento:hover::before {
+  opacity: 1;
+}
+
+.evento:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 18px 35px rgba(233,30,99,0.3);
+}
+
+.evento h3 {
+  color: var(--rosa);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.evento p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.evento .acciones {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
