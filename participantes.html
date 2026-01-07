@@ -9,6 +9,26 @@
   <title>Participantes RFA</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
+      
+<script>
+  const registrados = JSON.parse(localStorage.getItem("invitadosExtra")) || [];
+  const listaRegistrados = document.getElementById("lista-registrados");
+
+  if (registrados.length > 0) {
+    listaRegistrados.innerHTML = "";
+  }
+
+  registrados.forEach((inv, index) => {
+    const li = document.createElement("li");
+    li.textContent = `${index + 1}. ${inv.nombre} (${inv.email})`;
+    listaRegistrados.appendChild(li);
+  });
+</script>
+
+      
+
+      
 <body>
 
 <header>
@@ -150,6 +170,17 @@
       <li>⋆˙⟡ Representante RFA</li>
     </ul>
   </div>
+
+      
+</ul>
+
+<h2 style="margin-top:2rem;">🆕 Invitados Registrados</h2>
+
+<ul id="lista-registrados">
+  <li><em>No hay registros todavía</em></li>
+</ul>
+
+      
 </main>
 
 </body>
