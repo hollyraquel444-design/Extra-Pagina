@@ -1,1 +1,43 @@
+form {
+  background-color: var(--blanco);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+}
+
+label {
+  display: block;
+  ma
+  widthrgin-top: 1rem;
+  font-weight: bold;
+}
+
+input, select, textarea {: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+fieldset {
+  border: 1px solid var(--rosa-claro);
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+legend {
+  color: var(--rosa);
+  font-weight: bold;
+}
+
+
+.acciones-form {
+  margin-top: 1.5re;
+  display: flex;
+  justify-content: space-betweenm;
+}
+
+
 
